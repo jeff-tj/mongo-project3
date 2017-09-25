@@ -1,0 +1,5 @@
+map area: https://mapzen.com/data/metro-extracts/your-extracts/c98c29b17741
+reason: the original Sydney area dataset on OSM, included an extremely large
+areas of Sydney, including many places that I had not heard of before.
+Therefore, I selected a smaller area, however this allowed me to go through it
+in more detail, often case-by-case decisions.
