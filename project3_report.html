@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>project3_report</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h2 id="sydney-openstreetmap-data-wrangling-project">Sydney OpenStreetMap Data Wrangling Project</h2>
+<h3 id="jeffrey-tjeuw">Jeffrey Tjeuw</h3>
+<h3 id="contents">Contents</h3>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#problems">Problems Encountered in OSM Data</a><ul>
+<li><a href="#streetnameprob">Street name endings problems</a></li>
+<li><a href="#postcodeprob">Postcode problems</a></li>
+</ul>
+</li>
+<li><a href="#audit">Auditing the Data</a><ul>
+<li><a href="#postcodeaudit">Postcodes</a></li>
+<li><a href="#streetnameaudit">Street name endings</a></li>
+</ul>
+</li>
+<li><a href="#overview">Overview of the Data</a></li>
+<li><a href="#improvements">Improvements</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<h3 id="1-introduction-a-name-introduction-a-">1. Introduction <a name="introduction"></a></h3>
+<p>The data we used was a custom data set centered on Sydney metropolitan area.</p>
+<blockquote>
+<p>Link: <a href="https://mapzen.com/data/metro-extracts/your-extracts/c98c29b17741">https://mapzen.com/data/metro-extracts/your-extracts/c98c29b17741</a><br>Mirrored on Google Drive: <a href="https://drive.google.com/file/d/0B65XFpo9P0K3NW52RGdidzU3eEU/view?usp=sharing">https://drive.google.com/file/d/0B65XFpo9P0K3NW52RGdidzU3eEU/view?usp=sharing</a></p>
+</blockquote>
+<p>The original Sydney area dataset on OSM, included an extremely large areas of Sydney, including many places that I had not heard of before.Therefore, I selected a smaller area, however this allowed me to go through it in more detail, often case-by-case decisions.</p>
+<p>This document only provides a concise summary of the problems encountered and the steps taken to resolve them. Please see the iPython notebook and printout (project3.ipynb, project3.html) for more detail.</p>
+<p>Quick overview of the data, such as size and the number of each type of tag present:</p>
+<blockquote>
+<p>OSM size: 65.9 MB<br>{&#39;node&#39;: 282039, &#39;nd&#39;: 359303, &#39;bounds&#39;: 1, &#39;member&#39;: 25166, &#39;tag&#39;: 241467, &#39;osm&#39;: 1, &#39;way&#39;: 49541, &#39;relation&#39;: 2094}</p>
+</blockquote>
+<h3 id="2-problems-encountered-in-the-osm-data-a-name-problems-a-">2. Problems Encountered in the OSM Data <a name="problems"></a></h3>
+<p>We initially look for some common problems in the data, such as inconsistency in street name endings and postcodes.</p>
+<h4 id="street-name-endings-a-name-streetnameprob-a-">Street name endings <a name="streetnameprob"></a></h4>
+<p>To look at street name endings we use regex to extract the ending in the &quot;addr:street&quot; field and compile a set of endings in our data. We can see the results below:</p>
+<blockquote>
+<p>set([&#39;City&#39;, &#39;Boulevard&#39;, &#39;Sydney&#39;, &#39;Arcade&#39;, &#39;Wollit&#39;, u&#39;2026\u6fb3\u6d32&#39;, &#39;St.&#39;, &#39;street&#39;, &#39;Rd&#39;, &#39;Edward&#39;, &#39;Way&#39;, &#39;Promanade&#39;, &#39;Highway&#39;, &#39;underpass&#39;, &#39;Fitzroy&#39;, &#39;marrickville&#39;, u&#39;2000\u6fb3\u6d32&#39;, &#39;Street)&#39;, &#39;South&#39;, &#39;Terrace&#39;, &#39;Jones&#39;, &#39;Lane&#39;, &#39;Offramp&#39;, &#39;Plaza&#39;, &#39;Drive&#39;, &#39;St&#39;, &#39;Freeway&#39;, &#39;Place&#39;, &#39;Circuit&#39;, &#39;Ave&#39;, &#39;North&#39;, &#39;Gardens&#39;, &#39;Road&#39;, &#39;Wolli&#39;, &#39;Square&#39;, &#39;Parade&#39;, &#39;Point&#39;, &#39;Leichhardt&#39;, &#39;Esplanade&#39;, &#39;Boulevarde&#39;, &#39;Androtis&#39;, &#39;Street&#39;, &#39;Crescent&#39;, &#39;Broadway&#39;, &#39;Berith&#39;, &#39;Avenue&#39;, &#39;Market&#39;])</p>
+</blockquote>
+<p>Here we can see that most streets end with the unabbreviated street endings but there are the common problems of inconsistent abbreviations as well as other errors. In our audit we will print out these problems and examine them in detail</p>
+<h4 id="postcodes-a-name-postcodeprob-a-">Postcodes <a name="postcodeprob"></a></h4>
+<p>We also create a regex query for four integers, and create a set of entries in the &quot;addr:postcode&quot; field that do not conform to this. We also search other tags that contain &quot;code&quot;, in case postcodes have been stored in other tags. We truncate the output below:</p>
+<blockquote>
+<p>{&#39;addr:postcode&#39;: set([&#39;200&#39;,
+                      &#39;210&#39;,
+                      &#39;NSW 1460&#39;,
+                      ...
+                      &#39;NSW 2037&#39;]),
+&#39;is_in:country_code&#39;: set([&#39;AU&#39;]),
+&#39;is_in:state_code&#39;: set([&#39;NSW&#39;]),
+&#39;postal_code&#39;: set([&#39;1465;2033&#39;,
+                    &#39;2000&#39;,
+                    ...
+                    &#39;2231&#39;]),
+&#39;source:addr:postcode&#39;: set([&#39;knowledge&#39;]),
+&#39;source:postal_code&#39;: set([&#39;Wikipedia&#39;,
+                           &#39;knowledge&#39;,
+                           &#39;local_knowledge&#39;,
+                           &#39;wikipedia&#39;])}</p>
+</blockquote>
+<p>In Australia all postcodes are 4 integers, so can see that the &quot;addr:postcode&quot; has two errors where there are data entry mistakes (only 3 characters) and also inconsistent formatting where &quot;NSW&quot; has been appended to the front. Of the other fields containing code, only &quot;postal_code&quot; contains postcodes. These are mostly correct, apart from the first entry: &quot;1465:2033&quot;.</p>
+<h3 id="3-auditing-the-data-a-name-audit-a-">3. Auditing the data <a name="audit"></a></h3>
+<p>We know take a slightly deeper look at some of the problems in our data, namely we will print out a some of the problem elements in our data.</p>
+<h4 id="postcodes-a-name-postcodeaudit-a-">Postcodes <a name="postcodeaudit"></a></h4>
+<p>The first issue will look at are the postcodes which have problems other than being append with the state prefix - i.e. if &quot;NSW 2000&quot; we know that the problem is fairly simple - namely we will strip out the prefix.
+However we will look at the following issues identified above:</p>
+<ul>
+<li>3 digit poscodes</li>
+<li>&#39;1465;2033&#39; case
+We manually print out these problems:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;name&quot;&nbsp;v=&quot;Big&nbsp;Boy&nbsp;Thai&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;amenity&quot;&nbsp;v=&quot;restaurant&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;cuisine&quot;&nbsp;v=&quot;thai&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:city&quot;&nbsp;v=&quot;Darlinghurst&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:street&quot;&nbsp;v=&quot;Stanley&nbsp;Street&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:postcode&quot;&nbsp;v=&quot;210&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:housenumber&quot;&nbsp;v=&quot;82&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>---</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:postcode&quot;&nbsp;v=&quot;210&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>---</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;name&quot;&nbsp;v=&quot;Kensington&nbsp;POSTshop&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;amenity&quot;&nbsp;v=&quot;post_office&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;building&quot;&nbsp;v=&quot;yes&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:street&quot;&nbsp;v=&quot;Anzac&nbsp;Parade&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;postal_code&quot;&nbsp;v=&quot;1465;2033&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:housenumber&quot;&nbsp;v=&quot;168,170&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>---</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;postal_code&quot;&nbsp;v=&quot;1465;2033&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>---</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;name&quot;&nbsp;v=&quot;Queen&nbsp;Victoria&nbsp;Building&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;shop&quot;&nbsp;v=&quot;mall&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;name:ko&quot;&nbsp;v=&quot;&amp;#53304;&nbsp;&amp;#48709;&amp;#53664;&amp;#47532;&amp;#50500;&nbsp;&amp;#48716;&amp;#46377;&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;name:zh&quot;&nbsp;v=&quot;&amp;#32500;&amp;#22810;&amp;#21033;&amp;#20122;&amp;#22899;&amp;#29579;&amp;#22823;&amp;#21414;&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;tourism&quot;&nbsp;v=&quot;attraction&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;building&quot;&nbsp;v=&quot;retail&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;wikidata&quot;&nbsp;v=&quot;Q54518&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;wikipedia&quot;&nbsp;v=&quot;en:Queen&nbsp;Victoria&nbsp;Building&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;wheelchair&quot;&nbsp;v=&quot;yes&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:street&quot;&nbsp;v=&quot;George&nbsp;Street&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:postcode&quot;&nbsp;v=&quot;200&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;building:levels&quot;&nbsp;v=&quot;4&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:housenumber&quot;&nbsp;v=&quot;455&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>---</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;tag&nbsp;k=&quot;addr:postcode&quot;&nbsp;v=&quot;200&quot;&nbsp;/&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>---</span></span></span></div></pre><p>Here we can see the non-obvious errors are a small enough sample for us to correct manually. And we can explain them:</p>
+<ul>
+<li>The first error is a mistake - the postcode for Darlinghurst is 2010 - not 210</li>
+<li>The second one is a post office - 2033 is the postcode for the suburb, while 1465 is the postcode for PO Boxes located there. Since we are interested in the location and suburb, we will amend this to 2033</li>
+<li>The last one is also another mistake, the Queen Victoria Building is a popular building located in Sydney - which has postcode 2000 These should be relatively simple fixes but which will need to account for in our fix postcode function.</li>
+</ul>
+<h4 id="street-name-endings-a-name-streetnameaudit-a-">Street name endings <a name="streetnameaudit"></a></h4>
+<p>From above we have collected all the endings in &quot;addr:street&quot; field. Of the ones that are not good street names, we can form them into two groups:</p>
+<ul>
+<li>Abbreviations - these we will form a dictionary to correct</li>
+<li>Miscellaneous unrecognised forms - we will print these out to get a better handle on these issues</li>
+</ul>
+<p>We manually check the miscellaneous entries and resolve them the following way:</p>
+<ul>
+<li>Offramp is further information, so should not be in street names - we remove this.</li>
+<li>&quot;Sydney Fish Market&quot; is a venue and not a street name - we will amend these to &quot;Pyrmont Bridge Road&quot;. &quot;Androtis&quot; likewise is the name of a business in the Fish Market. We will similarly amend.</li>
+<li>&quot;marrickville&quot; is the suburb - we weill remove this to leave only the street name. We should also add this field in under suburb as well.</li>
+<li>&quot;Street)&quot; ending likewise additional information that should be removed.</li>
+<li>&quot;The Promenade&quot;, &quot;Elizabeth Plaza&quot;, &quot;Tramway Arcade&quot;, &quot;Magdalene Terrace&quot; are valid street names.</li>
+<li>&quot;Underpass&quot; additional information that is not part of the street name.</li>
+<li>&quot;Berith&quot;, &quot;Edward&quot; and &quot;Wolli&quot; are missing &quot;Street&quot;. These are all in the suburb of Kingsgrove and so must be the format of the contributor of that area. &quot;Wollit&quot; is probably a typo for &quot;Wolli as well.</li>
+<li>Bardsley Gardens and Roslyn Gardens are valid street names - in fact I have learnt something new here in that Gardens is a valid street ending.</li>
+<li>&quot;Leichhardt&quot; lists as the street address to a Commonwealth Bank. While there is a &quot;Leichhardt Street&quot; - there is no Bank @ no 18, however there is one on 18 Norton Street. We make this correction as well.</li>
+<li>Fitroy is a data entry problem - the proper name is &quot;Fitzroy Street&quot;, an easy correction.</li>
+<li>The entry with &quot;City&quot; does not have enough information for us to rectify. It would probably be best to leave as is or remove this entry.</li>
+<li>&quot;The Wharf, Cowper Wharf Road, Woolloomooloo, Sydney&quot; - is incorrect and so we just take the street name.</li>
+<li>Similarly we can also do the same to the two entry ending in a string of numbers and dashes.</li>
+<li>The entry &quot;Jones&quot; is for a now defunct company &quot;Team Bondi&quot; which used to be on &quot;Jones Street&quot;. While we could remove this entry, this would be inconsistent as the database may also contain other defunct companies - it would be better to audit this at that time. So here we settle for correcting the street name.</li>
+<li>The last one is slightly tricky - the official street name does turn out to be &quot;Alfred Street South&quot;. We so the entry is correctly entered. If we were taking statistics on street types and that was important, we may consider changing it to &quot;Alfred (South) Street&quot; or something similar. However I have decided to leave it be as it stands. As is &quot;Ocean Street North&quot;.</li>
+</ul>
+<h3 id="4-overview-of-the-data-a-name-overview-a-">4. Overview of the data <a name="overview"></a></h3>
+<p>We print off some basic stats about our json file:</p>
+<ul>
+<li><p>Number of documents:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>num_entries&nbsp;=&nbsp;db.mymaps.find().count()</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Entries&nbsp;after&nbsp;load:&nbsp;&quot;,&nbsp;num_entries</span></span></span></div></pre><blockquote>
+<p>Entries after load:  331580</p>
+</blockquote>
+</li>
+<li><p>File size and tag count:</p>
+</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>json_info&nbsp;=&nbsp;os.stat(&quot;sydney_australia.osm.json&quot;)</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;json&nbsp;size:&nbsp;&quot;,&nbsp;convert_bytes(json_info.st_size)</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Node&nbsp;count:&nbsp;&quot;,&nbsp;db.mymaps.find({&quot;type&quot;:&nbsp;&quot;node&quot;}).count()</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Way&nbsp;count:&nbsp;&quot;,&nbsp;db.mymaps.find({&quot;type&quot;:&nbsp;&quot;way&quot;}).count()</span></span></span></div></pre><blockquote>
+<p>json size:  72.2 MB<br>Node count:  282012<br>Way count:  49535</p>
+</blockquote>
+<ul>
+<li><p>Number of unique users:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Number&nbsp;of&nbsp;unique&nbsp;users:&nbsp;&quot;,&nbsp;len(db.mymaps.distinct(&quot;created.user&quot;))</span></span></span></div></pre><p>Number of unique users:  1231</p>
+</li>
+<li><p>Top 5 users:</p>
+</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>top_users&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$created.user&quot;,&nbsp;&quot;count&quot;:&nbsp;{&quot;$sum&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$project&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$_id&quot;,</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>&quot;count&quot;:&nbsp;&quot;$count&quot;,</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;percent&quot;:&nbsp;{&quot;$divide&quot;:&nbsp;[&quot;$count&quot;,&nbsp;num_entries]}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$sort&quot;:&nbsp;{&quot;count&quot;:&nbsp;-1}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$limit&quot;:&nbsp;5}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pp.pprint(list(top_users))</span></span></span></div></pre><blockquote>
+<p>[{u&#39;_id&#39;: u&#39;aharvey&#39;, u&#39;count&#39;: 21450, u&#39;percent&#39;: 0.06469027082453707},<br>{u&#39;_id&#39;: u&#39;inas&#39;, u&#39;count&#39;: 18083, u&#39;percent&#39;: 0.054535858616321854},<br>{u&#39;_id&#39;: u&#39;samuelrussell&#39;, u&#39;count&#39;: 16322, u&#39;percent&#39;: 0.04922492309548224},<br>{u&#39;_id&#39;: u&#39;Ebenezer&#39;, u&#39;count&#39;: 13689, u&#39;percent&#39;: 0.04128415465347729},<br>{u&#39;_id&#39;: u&#39;TheSwavu&#39;, u&#39;count&#39;: 13442, u&#39;percent&#39;: 0.04053923638337656}]</p>
+</blockquote>
+<p>Unlike other data sets in the course example, this dataset does not appear to heavily automised (i.e. with data scraping an bots). In fact, the user IDs appear mostly human and the percentage contributions of the top 5 are relatively low (in the example project, the top user had contributed 52.92%). So the database seems to mostly have been contributed to by humans. This has both positives (it shows an active community and we are likely to have interesting additions), but at the same time opens up data entry issues and inconsistencies (seen above).</p>
+<ul>
+<li><p>User with only one post:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>single_post&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$created.user&quot;,&nbsp;&quot;count&quot;:&nbsp;{&quot;$sum&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$match&quot;:&nbsp;{&quot;count&quot;:&nbsp;1}}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>len(list(single_post))</span></span></span></div></pre><blockquote>
+<p>293</p>
+</blockquote>
+</li>
+<li><p>Top 10 amenities:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>top_amenities&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$match&quot;:&nbsp;{&quot;amenity&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$amenity&quot;,&nbsp;&quot;count&quot;:&nbsp;{&quot;$sum&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$sort&quot;:&nbsp;{&quot;count&quot;:&nbsp;-1}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$limit&quot;:&nbsp;10}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pp.pprint(list(top_amenities))</span></span></span></div></pre><blockquote>
+<p>[{u&#39;_id&#39;: u&#39;parking&#39;, u&#39;count&#39;: 737},<br>{u&#39;_id&#39;: u&#39;restaurant&#39;, u&#39;count&#39;: 645},<br>{u&#39;_id&#39;: u&#39;cafe&#39;, u&#39;count&#39;: 565},<br>{u&#39;_id&#39;: u&#39;bench&#39;, u&#39;count&#39;: 540},<br>{u&#39;_id&#39;: u&#39;drinking_water&#39;, u&#39;count&#39;: 407},<br>{u&#39;_id&#39;: u&#39;bicycle_parking&#39;, u&#39;count&#39;: 370},<br>{u&#39;_id&#39;: u&#39;toilets&#39;, u&#39;count&#39;: 319},<br>{u&#39;_id&#39;: u&#39;pub&#39;, u&#39;count&#39;: 299},<br>{u&#39;_id&#39;: u&#39;school&#39;, u&#39;count&#39;: 222},<br>{u&#39;_id&#39;: u&#39;fast_food&#39;, u&#39;count&#39;: 216}]</p>
+</blockquote>
+</li>
+<li><p>Top 10 cuisines:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>top_cuisines&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$match&quot;:&nbsp;{&quot;cuisine&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$cuisine&quot;,&nbsp;&quot;count&quot;:&nbsp;{&quot;$sum&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$sort&quot;:&nbsp;{&quot;count&quot;:&nbsp;-1}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$limit&quot;:&nbsp;10}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pp.pprint(list(top_cuisines))</span></span></span></div></pre><blockquote>
+<p>[{u&#39;_id&#39;: u&#39;coffee_shop&#39;, u&#39;count&#39;: 82},<br>{u&#39;_id&#39;: u&#39;burger&#39;, u&#39;count&#39;: 53},<br>{u&#39;_id&#39;: u&#39;pizza&#39;, u&#39;count&#39;: 45},<br>{u&#39;_id&#39;: u&#39;thai&#39;, u&#39;count&#39;: 44},<br>{u&#39;_id&#39;: u&#39;italian&#39;, u&#39;count&#39;: 38},<br>{u&#39;_id&#39;: u&#39;japanese&#39;, u&#39;count&#39;: 33},<br>{u&#39;_id&#39;: u&#39;chinese&#39;, u&#39;count&#39;: 24},<br>{u&#39;_id&#39;: u&#39;sandwich&#39;, u&#39;count&#39;: 21},<br>{u&#39;_id&#39;: u&#39;indian&#39;, u&#39;count&#39;: 18},<br>{u&#39;_id&#39;: u&#39;chicken&#39;, u&#39;count&#39;: 15}]</p>
+</blockquote>
+</li>
+<li><p>Best postcodes to dine in (we find the postcodes with the most restaurants):</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>top_eatpc&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$match&quot;:&nbsp;{&quot;amenity&quot;:&nbsp;&quot;restaurant&quot;,&nbsp;&quot;address.postcode&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$address.postcode&quot;,&nbsp;&quot;count&quot;:&nbsp;{&quot;$sum&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$sort&quot;:&nbsp;{&quot;count&quot;:&nbsp;-1}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$limit&quot;:&nbsp;10}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pp.pprint(list(top_eatpc))</span></span></span></div></pre><blockquote>
+<p>[{u&#39;_id&#39;: u&#39;2000&#39;, u&#39;count&#39;: 23},<br>{u&#39;_id&#39;: u&#39;2010&#39;, u&#39;count&#39;: 14},<br>{u&#39;_id&#39;: u&#39;2060&#39;, u&#39;count&#39;: 14},<br>{u&#39;_id&#39;: u&#39;2011&#39;, u&#39;count&#39;: 11},<br>{u&#39;_id&#39;: u&#39;2049&#39;, u&#39;count&#39;: 11},<br>{u&#39;_id&#39;: u&#39;2040&#39;, u&#39;count&#39;: 9},<br>{u&#39;_id&#39;: u&#39;2042&#39;, u&#39;count&#39;: 6},<br>{u&#39;_id&#39;: u&#39;2050&#39;, u&#39;count&#39;: 6},<br>{u&#39;_id&#39;: u&#39;2038&#39;, u&#39;count&#39;: 6},<br>{u&#39;_id&#39;: u&#39;2065&#39;, u&#39;count&#39;: 5}]</p>
+</blockquote>
+</li>
+</ul>
+<p>The results of the last two queries are as expected - Australians like to pride themselves on &quot;coffee-culture&quot; and so the abundance of coffee shops would be expected. We see that there is good evidence of the multicultural society we live in as well with a good assortment of restaurants.</p>
+<p>Likewise the most popular eating spots are 2000 (Sydney CBD), 2010 (Surry Hills) which are well known. However 2060 (North Sydney) was also a little unexpected, but that could be due to the fact that I do not regularly go there. Interesting my current suburb 2050 made the top 10 list.</p>
+<p>Lastly I would like to see the most popular amenities in my local area.</p>
+<ul>
+<li>Top amenities in my local area (postcode 2050):<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>top_local&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$match&quot;:&nbsp;{&quot;address.postcode&quot;:&nbsp;&quot;2050&quot;,&nbsp;&quot;amenity&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$amenity&quot;,&nbsp;&quot;count&quot;:&nbsp;{&quot;$sum&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;$sort&quot;:&nbsp;{&quot;count&quot;:&nbsp;-1}}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pp.pprint(list(top_local))</span></span></span></div></pre><blockquote>
+<p>[{u&#39;_id&#39;: u&#39;restaurant&#39;, u&#39;count&#39;: 6},<br>{u&#39;_id&#39;: u&#39;cafe&#39;, u&#39;count&#39;: 5},<br>{u&#39;_id&#39;: u&#39;pub&#39;, u&#39;count&#39;: 3},<br>{u&#39;_id&#39;: u&#39;post_box&#39;, u&#39;count&#39;: 2},<br>{u&#39;_id&#39;: u&#39;brothel&#39;, u&#39;count&#39;: 1},<br>{u&#39;_id&#39;: u&#39;hospital&#39;, u&#39;count&#39;: 1},<br>{u&#39;_id&#39;: u&#39;embassy&#39;, u&#39;count&#39;: 1},<br>{u&#39;_id&#39;: u&#39;fuel&#39;, u&#39;count&#39;: 1},<br>{u&#39;_id&#39;: u&#39;school&#39;, u&#39;count&#39;: 1}]</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="5-improvements-a-name-improvements-a-">5. Improvements <a name="improvements"></a></h3>
+<p>One of the issues that we encountered in data cleaning part of the project was that there were many inconsistent ways for users to list addresses. Some were well formatted with separate street, name, suburb, etc. However as we saw above sometimes there were streetnames which contained suburb, postcode information etc.</p>
+<p>We can see that not all entries with suburbs have postcodes and vice versa.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>#&nbsp;Entry&nbsp;has&nbsp;a&nbsp;postcode</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Number&nbsp;entries&nbsp;with&nbsp;a&nbsp;postcode:&nbsp;&quot;,&nbsp;db.mymaps.find({&quot;address.postcode&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}).count()</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>#&nbsp;Entry&nbsp;has&nbsp;an&nbsp;address</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Number&nbsp;of&nbsp;entries&nbsp;with&nbsp;a&nbsp;suburb:&nbsp;&quot;,&nbsp;db.mymaps.find({&quot;address.suburb&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}).count()</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>#&nbsp;Entry&nbsp;has&nbsp;both</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>both&nbsp;=&nbsp;db.mymaps.find({&quot;$and&quot;:&nbsp;[{&quot;address.postcode&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;address.suburb&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}]}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>).count()</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;Number&nbsp;of&nbsp;entries&nbsp;with&nbsp;both&nbsp;postcode&nbsp;and&nbsp;suburbs:&nbsp;&quot;,&nbsp;both</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>#&nbsp;Look&nbsp;at&nbsp;these&nbsp;entries</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pc_suburb&nbsp;=&nbsp;db.mymaps.aggregate([{&quot;$match&quot;:&nbsp;{&quot;address.postcode&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1},&nbsp;&quot;address.suburb&quot;:&nbsp;{&quot;$exists&quot;:&nbsp;1}}},</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&quot;$group&quot;:&nbsp;{&quot;_id&quot;:&nbsp;&quot;$address.postcode&quot;,</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>&quot;suburbs&quot;:&nbsp;{&quot;$addToSet&quot;:&nbsp;&quot;$address.suburb&quot;}}}])</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;&quot;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>print&nbsp;&quot;List&nbsp;of&nbsp;postcodes&nbsp;and&nbsp;suburbs&quot;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>pp.pprint(list(pc_suburb))</span></span></span></div></pre><blockquote>
+<p>Number entries with a postcode:  3788<br>Number of entries with a suburb:  465<br>Number of entries with both postcode and suburbs:  433  </p>
+<p>List of postcodes and suburbs<br>[{u&#39;_id&#39;: u&#39;2016&#39;, u&#39;suburbs&#39;: [u&#39;Redfern&#39;]},<br>{u&#39;_id&#39;: u&#39;2037&#39;, u&#39;suburbs&#39;: [u&#39;Glebe&#39;]},<br>{u&#39;_id&#39;: u&#39;2040&#39;, u&#39;suburbs&#39;: [u&#39;Leichhardt&#39;]},<br>{u&#39;_id&#39;: u&#39;2027&#39;, u&#39;suburbs&#39;: [u&#39;Edgecliff&#39;]},<br>{u&#39;_id&#39;: u&#39;2089&#39;, u&#39;suburbs&#39;: [u&#39;Neutral Bay&#39;]},<br>{u&#39;_id&#39;: u&#39;2062&#39;, u&#39;suburbs&#39;: [u&#39;Cammeray&#39;]},<br>{u&#39;_id&#39;: u&#39;2060&#39;, u&#39;suburbs&#39;: [u&#39;North Sydney&#39;]},<br>{u&#39;_id&#39;: u&#39;2011&#39;, u&#39;suburbs&#39;: [u&#39;Kings Cross&#39;]},<br>{u&#39;_id&#39;: u&#39;2044&#39;, u&#39;suburbs&#39;: [u&#39;Tempe&#39;]},<br>{u&#39;_id&#39;: u&#39;2134&#39;, u&#39;suburbs&#39;: [u&#39;Burwood&#39;]},<br>{u&#39;_id&#39;: u&#39;2131&#39;, u&#39;suburbs&#39;: [u&#39;Ashfield&#39;]},<br>{u&#39;_id&#39;: u&#39;2133&#39;, u&#39;suburbs&#39;: [u&#39;Croydon Park&#39;]},<br>{u&#39;_id&#39;: u&#39;2048&#39;, u&#39;suburbs&#39;: [u&#39;Stanmore&#39;]},<br>{u&#39;_id&#39;: u&#39;2065&#39;, u&#39;suburbs&#39;: [u&#39;St Leonards&#39;, u&#39;Crows Nest&#39;]},<br>{u&#39;_id&#39;: u&#39;2000&#39;, u&#39;suburbs&#39;: [u&#39;Chippendale&#39;]},<br>{u&#39;_id&#39;: u&#39;2137&#39;, u&#39;suburbs&#39;: [u&#39;Concord&#39;]},<br>{u&#39;_id&#39;: u&#39;2010&#39;, u&#39;suburbs&#39;: [u&#39;Darlinghurst&#39;]},<br>{u&#39;_id&#39;: u&#39;2008&#39;, u&#39;suburbs&#39;: [u&#39;Chippendale&#39;]},<br>{u&#39;_id&#39;: u&#39;2203&#39;, u&#39;suburbs&#39;: [u&#39;Dulwich Hill&#39;]},<br>{u&#39;_id&#39;: u&#39;2206&#39;, u&#39;suburbs&#39;: [u&#39;Earlwood&#39;]},<br>{u&#39;_id&#39;: u&#39;2046&#39;, u&#39;suburbs&#39;: [u&#39;Abbotsford&#39;]}]  </p>
+</blockquote>
+<p>So here we can try and improve the data and make it more complete by using our entries in the database with both to go back and fill in the ones with missing data. Our process would involve:</p>
+<ul>
+<li>Using the entries with both postcode and suburbs to generate a list of both suburbs and postcodes</li>
+<li>Use this list to then update the entries with missing values</li>
+</ul>
+<p>However, we can see that there may be a few issues here highlighted by our invetigative query:</p>
+<ul>
+<li>The list where we have both values is not comprehensive - in fact it is centered around the inner city</li>
+<li>The mapping is not 1:1 - we can see for 2065 we have 2 suburbs. And indeed we can see we would have the same problem the other way - i.e. Chippendale appears twice for 2000 and 2008. So using our current list we could only feasibly fill in a few.<ul>
+<li>However this could be recitified via a comprehensive data, for example the Auspost sells comprehensive postal code data which we would expect to be clean which we could use to improve our own database: <a href="https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/address-data/postcode-data">https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/address-data/postcode-data</a></li>
+</ul>
+</li>
+</ul>
+<p>However after some brief Googling, it also appears that mongo may also have a limitation that would prevent us from using one entry to update a different entry:</p>
+<ul>
+<li>&quot;Bad news is that AFAIK you can&#39;t do it with a single update() call - mongo doesn&#39;t support referring to current object in update.&quot; <a href="https://stackoverflow.com/questions/2606657/update-field-with-another-fields-value-in-the-document">https://stackoverflow.com/questions/2606657/update-field-with-another-fields-value-in-the-document</a></li>
+<li>&quot;You cannot refer to the document itself in an update (yet).&quot; <a href="https://stackoverflow.com/questions/3974985/update-mongodb-field-using-value-of-another-field?rq=1">https://stackoverflow.com/questions/3974985/update-mongodb-field-using-value-of-another-field?rq=1</a>
+Therefore this would need to be accomplomplished via python perhaps in the data cleaning phase.</li>
+</ul>
+<h3 id="6-conclusion-a-name-conclusion-a-">6. Conclusion <a name="conclusion"></a></h3>
+<p>Overall we can see that the custom area I selected for metropolitan Syney (mainly because of the better knowledge I have of the area rather than taking a whole state area) is in relatively good shape. The initial scan of problem tags appeared to be minimal.</p>
+<p>However there did appear to some data entry issues, mainly inconsistency and data entry errors, in that data. This is what would be expected from a dataset which had been entered by humans. The steps I outlined above highlight rudimentary attempts to clean and standardise the data.</p>
+<p>We also see when we run database queries that the map details are incomplete. If we wanted, we could cross reference it with a commercial database to improve it.</p></body>
+</html>
