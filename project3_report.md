@@ -198,11 +198,7 @@ pp.pprint(list(top_amenities))
 > {u'_id': u'cafe', u'count': 565},  
 > {u'_id': u'bench', u'count': 540},  
 > {u'_id': u'drinking_water', u'count': 407},  
-> {u'_id': u'bicycle_parking', u'count': 370},  
-> {u'_id': u'toilets', u'count': 319},  
-> {u'_id': u'pub', u'count': 299},  
-> {u'_id': u'school', u'count': 222},  
-> {u'_id': u'fast_food', u'count': 216}]
+> ...
 
 * Top 10 cuisines:
 ```
@@ -217,11 +213,7 @@ pp.pprint(list(top_cuisines))
 > {u'_id': u'pizza', u'count': 45},  
 > {u'_id': u'thai', u'count': 44},  
 > {u'_id': u'italian', u'count': 38},  
-> {u'_id': u'japanese', u'count': 33},  
-> {u'_id': u'chinese', u'count': 24},  
-> {u'_id': u'sandwich', u'count': 21},  
-> {u'_id': u'indian', u'count': 18},  
-> {u'_id': u'chicken', u'count': 15}]
+> ...
 
 * Best postcodes to dine in (we find the postcodes with the most restaurants):
 ```
@@ -236,11 +228,7 @@ pp.pprint(list(top_eatpc))
 > {u'_id': u'2060', u'count': 14},  
 > {u'_id': u'2011', u'count': 11},  
 > {u'_id': u'2049', u'count': 11},   
-> {u'_id': u'2040', u'count': 9},  
-> {u'_id': u'2042', u'count': 6},  
-> {u'_id': u'2050', u'count': 6},  
-> {u'_id': u'2038', u'count': 6},  
-> {u'_id': u'2065', u'count': 5}]
+> ...
 
 The results of the last two queries are as expected - Australians like to pride themselves on "coffee-culture" and so the abundance of coffee shops would be expected. We see that there is good evidence of the multicultural society we live in as well with a good assortment of restaurants.
 
@@ -260,10 +248,7 @@ pp.pprint(list(top_local))
 > {u'_id': u'pub', u'count': 3},  
 > {u'_id': u'post_box', u'count': 2},  
 > {u'_id': u'brothel', u'count': 1},  
-> {u'_id': u'hospital', u'count': 1},  
-> {u'_id': u'embassy', u'count': 1},  
-> {u'_id': u'fuel', u'count': 1},  
-> {u'_id': u'school', u'count': 1}]
+> ...
 
 ### 5. Improvements <a name=improvements></a>
 One of the issues that we encountered in data cleaning part of the project was that there were many inconsistent ways for users to list addresses. Some were well formatted with separate street, name, suburb, etc. However as we saw above sometimes there were streetnames which contained suburb, postcode information etc.
@@ -309,13 +294,7 @@ pp.pprint(list(pc_suburb))
 > {u'_id': u'2133', u'suburbs': [u'Croydon Park']},  
 > {u'_id': u'2048', u'suburbs': [u'Stanmore']},  
 > {u'_id': u'2065', u'suburbs': [u'St Leonards', u'Crows Nest']},  
-> {u'_id': u'2000', u'suburbs': [u'Chippendale']},  
-> {u'_id': u'2137', u'suburbs': [u'Concord']},  
-> {u'_id': u'2010', u'suburbs': [u'Darlinghurst']},  
-> {u'_id': u'2008', u'suburbs': [u'Chippendale']},  
-> {u'_id': u'2203', u'suburbs': [u'Dulwich Hill']},  
-> {u'_id': u'2206', u'suburbs': [u'Earlwood']},  
-> {u'_id': u'2046', u'suburbs': [u'Abbotsford']}]  
+> ...
 
 So here we can try and improve the data and make it more complete by using our entries in the database with both to go back and fill in the ones with missing data. Our process would involve:
 * Using the entries with both postcode and suburbs to generate a list of both suburbs and postcodes
